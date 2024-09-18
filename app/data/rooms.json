@@ -1,0 +1,12 @@
+[
+    {
+      "Name": "general",
+      "Type": 0
+    },
+    {
+      "Name": "private",
+      "Type": 1,
+      "Password": "88bd69b5bb657c5aaf3a939d1ed9a63f2d616aebac2b08eb7f120af93c375d21",
+      "Motd": "☠ You're now in a safe place to discuss ☠"
+    }
+  ]
