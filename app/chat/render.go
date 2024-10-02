@@ -93,7 +93,7 @@ func Login(s ssh.Session, term *xterm.Terminal) (bool, *database.User) {
 	access, currentUser := services.CheckUser(s.User(), serverPass)
 	if !access {
 		client.SendMessage("Permission denied\n", models.ErrorStyle, term)
-		log.Println("Wrong password for " + s.User() + " | " + s.RemoteAddr().String())
+		log.Println("Permission denied | User: " + s.User() + " | " + s.RemoteAddr().String())
 		client.GracefulExit(s, 1, true, nil)
 		return false, nil
 	}

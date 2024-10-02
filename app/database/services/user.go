@@ -93,7 +93,7 @@ func UnbanUser(username string) bool {
 
 func CheckUser(username string, plainpassword string) (bool, *dbmodels.User) {
 	var user dbmodels.User
-	result := database.Db.Where("username = ? and banned = ?", username, false).First(&user)
+	result := database.Db.Where("username = ? and banned = ? and connected = ?", username, false, false).First(&user)
 	if result.Error != nil {
 		return false, nil
 	}
